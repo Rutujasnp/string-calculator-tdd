@@ -7,7 +7,13 @@ public class StringCalculatorImpl  implements  StringCalculator {
 	@Override
 	public int add(String numbers) {
 		
-		return 0;
+		//if the string of numbers is empty
+		if(numbers.isEmpty() || numbers.equals(" ")) {
+			return 0;
+		}
+		//for single number input
+		int number= Integer.parseInt(numbers);
+		return number;
 	}
 
 }
