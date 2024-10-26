@@ -36,6 +36,11 @@ class StringCalculatorApplicationTests {
 	public void testNewlineDelimiterInNumberString() {
 		Assertions.assertEquals(6, stringCalculatorImpl.add("1\n2,3"));
 	}
+	
+	@Test
+	public void testCustomDelimiterInNumberString() {
+		Assertions.assertEquals(3, stringCalculatorImpl.add("//;\n1;2"));
+	}
 }
 
 
