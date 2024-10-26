@@ -31,6 +31,11 @@ class StringCalculatorApplicationTests {
 	public void testMultipleNumberInput() {
 		Assertions.assertEquals(10, stringCalculatorImpl.add("1,2,3,4"));
 	}
+	
+	@Test
+	public void testNewlineDelimiterInNumberString() {
+		Assertions.assertEquals(6, stringCalculatorImpl.add("1\n2,3"));
+	}
 }
 
 
