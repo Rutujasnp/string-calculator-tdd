@@ -17,14 +17,15 @@ public class StringCalculatorImpl implements StringCalculator {
 
 		// for numbers string has newline delimiter
 
-//		if (numbers.contains("\n")) {
-//			numbers=numbers.replace("\n", ",");
-//		}
 		// for custom delimiters
 		String delimiter = ",|\n";
 		int delimiterIndex = numbers.indexOf("\n");
 		if (numbers.startsWith("//")) {
 			delimiter = numbers.substring(2, delimiterIndex);
+			// Handle multiple character delimiters surrounded by []
+			if (delimiter.startsWith("[") && delimiter.endsWith("]")) {
+				delimiter = delimiter.substring(1, delimiter.length() - 1); // Remove the brackets
+			}
 			numbers = numbers.substring(delimiterIndex + 1);
 		}
 

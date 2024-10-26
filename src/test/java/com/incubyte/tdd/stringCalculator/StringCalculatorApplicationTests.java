@@ -48,4 +48,10 @@ class StringCalculatorApplicationTests {
 		});
 		Assertions.assertEquals("negative numbers not allowed: [-1, -3]", exception.getMessage());
 	}
+	
+
+	@Test
+	public void testDifferentCustomDelimiterInNumberString() {
+		Assertions.assertEquals(3, stringCalculatorImpl.add("//[**]\n1[**]2"));
+	}
 }
