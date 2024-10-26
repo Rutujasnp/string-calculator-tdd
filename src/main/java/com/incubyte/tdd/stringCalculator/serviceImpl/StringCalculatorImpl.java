@@ -11,9 +11,19 @@ public class StringCalculatorImpl  implements  StringCalculator {
 		if(numbers.isEmpty() || numbers.equals(" ")) {
 			return 0;
 		}
-		//for single number input
-		int number= Integer.parseInt(numbers);
-		return number;
+		
+		
+		
+		//for numbers string has two numbers
+		String delimiter= ",";
+		int sum=0;
+		String numbersArray[]=numbers.split(delimiter);
+		for (String numString: numbersArray){
+			int number= Integer.parseInt(numString);
+			sum+=number;
+			
+		}
+		return sum;
 	}
 
 }
