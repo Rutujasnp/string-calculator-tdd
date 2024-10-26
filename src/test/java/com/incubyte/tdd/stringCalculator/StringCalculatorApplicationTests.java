@@ -26,6 +26,11 @@ class StringCalculatorApplicationTests {
 	public void testTwoNumberInput() {
 		Assertions.assertEquals(3, stringCalculatorImpl.add("1,2"));
 	}
+	
+	@Test
+	public void testMultipleNumberInput() {
+		Assertions.assertEquals(10, stringCalculatorImpl.add("1,2,3,4"));
+	}
 }
 
 
