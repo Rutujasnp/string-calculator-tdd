@@ -17,8 +17,14 @@ class StringCalculatorApplicationTests {
 
 	
 	
-	@Test public void testSingleNumberInput() {
+	@Test 
+	public void testSingleNumberInput() {
 		Assertions.assertEquals(1, stringCalculatorImpl.add("1"));
+	}
+	
+	@Test
+	public void testTwoNumberInput() {
+		Assertions.assertEquals(3, stringCalculatorImpl.add("1,2"));
 	}
 }
 
