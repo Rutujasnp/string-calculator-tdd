@@ -14,7 +14,11 @@ public class StringCalculatorImpl  implements  StringCalculator {
 		
 		
 		
-		//for numbers string has two numbers
+		//for numbers string has newline delimiter
+		
+		if (numbers.contains("\n")) {
+			numbers=numbers.replace("\n", ",");
+		}
 		String delimiter= ",";
 		int sum=0;
 		String numbersArray[]=numbers.split(delimiter);
