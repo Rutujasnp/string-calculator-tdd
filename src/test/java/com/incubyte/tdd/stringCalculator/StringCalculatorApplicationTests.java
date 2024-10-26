@@ -15,4 +15,11 @@ class StringCalculatorApplicationTests {
 		Assertions.assertEquals(0, stringCalculatorImpl.add(""));
 	}
 
+	
+	
+	@Test public void testSingleNumberInput() {
+		Assertions.assertEquals(1, stringCalculatorImpl.add("1"));
+	}
 }
+
+
